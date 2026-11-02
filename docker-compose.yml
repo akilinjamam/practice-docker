@@ -38,7 +38,7 @@ services:
     container_name: todo-client
 
     ports:
-      - "3000:80"
+      - "3007:80"
 
     depends_on:
       - app

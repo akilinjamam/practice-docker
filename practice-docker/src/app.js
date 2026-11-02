@@ -13,7 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
     cors({
-        origin: "http://localhost:3000",
+        origin: [
+            'http://103.14.23.180:3007', // Your live VPS React frontend
+            'http://localhost:5173',       // For local Vite development
+            'http://localhost:3000'        // If you test locally on 3000
+        ],
     })
 );
 
