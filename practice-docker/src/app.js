@@ -11,11 +11,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(
-    cors({
-        origin: "http://103.14.23.180:3007",
-    })
-);
+// Configure CORS
+const corsOptions = {
+    origin: [
+        'http://103.14.23.180:3007', // Your live VPS React frontend
+        'http://localhost:5173',       // For local Vite development
+        'http://localhost:3000'        // If you test locally on 3000
+    ],
+    credentials: true,               // Allow cookies/authorization headers if needed
+    optionsSuccessStatus: 200
+};
 
 // Health check
 app.get("/", (req, res) => {
