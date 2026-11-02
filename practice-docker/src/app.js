@@ -11,7 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Configure CORS
 const corsOptions = {
     origin: [
         'http://103.14.23.180:3007', // Your live VPS React frontend
@@ -21,6 +20,7 @@ const corsOptions = {
     credentials: true,               // Allow cookies/authorization headers if needed
     optionsSuccessStatus: 200
 };
+app.use(corsOptions)
 
 // Health check
 app.get("/", (req, res) => {
