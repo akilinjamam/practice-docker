@@ -36,7 +36,7 @@ jobs:
             docker compose down
             docker compose up --build -d
             
-            # Clean up dangling unused images to save VPS disk space
+            # Clean up dangling unused images to save VPS disk space now
             docker image prune -f
             
             echo "Deployment completed successfully!"
