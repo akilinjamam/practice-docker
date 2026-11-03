@@ -13,7 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
     cors({
-        origin: "http://103.14.23.180:3007",
+        origin: [
+            "http://todo.mediposbd.com",
+            "https://todo.mediposbd.com",
+            "http://103.14.23.180:3007" // Optional: keep your local IP if you still test via IP directly
+        ],
+        credentials: true, // Optional: set to true if your frontend sends cookies or Authorization headers
     })
 );
 
