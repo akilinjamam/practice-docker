@@ -34,7 +34,7 @@ services:
       dockerfile: Dockerfile
       args:
         args:
-        VITE_API_URL: http://103.14.23.180:5000/api/v1  # <--- Must be your public IP, NOT localhost
+        VITE_API_URL: https://serverthree.mediposbd.com/api/v1  # <--- Must be your public IP, NOT localhost
 
     container_name: todo-client
 
