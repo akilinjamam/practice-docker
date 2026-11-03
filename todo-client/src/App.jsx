@@ -80,7 +80,7 @@ function App() {
       <main className="container">
         <section className="welcome">
           <p className="eyebrow">YOUR PRODUCTIVITY SPACE</p>
-          <h1>Manage your tasks.</h1>
+          <h1>Manage your tasks borther.</h1>
           <p>Organize your day, one task at a time.</p>
         </section>
 
