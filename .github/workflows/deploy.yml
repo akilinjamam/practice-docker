@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           source: "."
-          target: "~/deployments/projects"
+          target: "/www/wwwroot/practice-docker"
 
       - name: Build and Deploy on VPS via SSH
         uses: appleboy/ssh-action@master
@@ -30,7 +30,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd ~/deployments/projects
+            cd /www/wwwroot/practice-docker
             
             # Pull latest changes, rebuild containers, and detach
             docker compose down
